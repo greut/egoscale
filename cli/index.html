@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+<meta http-equiv="refresh" content="0; url=/cli/">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="section">
+<div class="container">
+    <div class="content">
+      
+
+<h1 id="exo-cli">exo cli</h1>
+
+<p>Manage easily your Exoscale infrastructure from the exo command-line</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>We provide many alternatives on the <a href="https://github.com/exoscale/egoscale/releases">releases</a> page.</p>
+
+<h3 id="manual-compilation">Manual compilation</h3>
+
+<pre><code>$ go get -u github.com/golang/dep/cmd/dep
+$ go get -d github.com/exoscale/egoscale/...
+
+$ cd $GOPATH/src/github.com/exoscale/egoscale/
+$ dep ensure -vendor-only
+
+$ cd cmd/exo
+$ dep ensure -vendor-only
+
+$ go install
+</code></pre>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>The CLI will guide you in the initial configuration.<br />
+The configuration file and all assets created by any <code>exo</code> command will be saved in the <code>~/.exoscale/</code> folder.</p>
+
+<p>You can find your credentials in our <a href="https://portal.exoscale.com/account/profile/api">Exoscale Console</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ exo config</code></pre></div>
+<h2 id="usage">Usage</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ exo --help</code></pre></div>
+    </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+    <h3 class="title">Commands</h3>
+    <ul>
+          
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo/">exo</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Manage easily your Exoscale infrastructure</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_affinitygroup/">exo affinitygroup</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Affinity groups management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_api/">exo api</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Exoscale api</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_config/">exo config</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Generate config file for this cli</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_dns/">exo dns</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">DNS cmd lets you host your zones and manage records</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_eip/">exo eip</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Elastic IPs management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_firewall/">exo firewall</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Security groups management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_privnet/">exo privnet</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Private networks management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_sos/">exo sos</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Simple Object Storage management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_ssh/">exo ssh</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">SSH into a virtual machine instance</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_sshkey/">exo sshkey</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">SSH key pairs management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_template/">exo template</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Templates details</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_version/">exo version</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Print the version of exo</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_vm/">exo vm</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Virtual machines management</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cli/exo_zone/">exo zone</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List all available zones</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+    </ul>
+
+    
+
+
+</div>
+</section>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  exo dns add SRV &ndash; Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+<meta http-equiv="refresh" content="0; url=/cli/exo_dns_add_SRV">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="hero is-light is-bold">
+<div class="hero-body">
+<div class="container">
+  <h1 class="title is-1 is-spaced">exo dns add SRV</h1>
+  <p class="subtitle">Add SRV record type to a domain</p>
+</div>
+</div>
+</section>
+
+<div class="container">
+  <div class="content">
+    <p></p>
+
+<h3 id="synopsis">Synopsis</h3>
+
+<p>Add an &laquo;SRV&raquo; record to specify the location of servers for a specific service.</p>
+
+<pre><code>exo dns add SRV &lt;domain name&gt; [flags]
+</code></pre>
+
+<h3 id="options">Options</h3>
+
+<p><code>--help, -h</code> - help for SRV<br />
+<code>--name, -n</code> - Leave this blank to create a record for &lt;domain name&gt;, You may use the &#39;*&#39; wildcard here.<br />
+<code>--port, -P</code> - The &#39;TCP&#39; or &#39;UDP&#39; port on which the service is found.<br />
+<code>--priority</code> - Priority<br />
+<code>--protocol, -p</code> - This will usually be &#39;TCP&#39; or &#39;UDP&#39;.<br />
+<code>--symbolic-name, -s</code> - This will be a symbolic name for the service, like &#39;sip&#39;. It might also be called Service at other DNS providers.<br />
+<code>--target</code> - The canonical hostname of the machine providing the service.<br />
+<code>--ttl, -t</code> - The time in second to leave (refresh rate) of the record.<br />
+<code>--weight, -w</code> - A relative weight for &#39;SRV&#39; records with the same priority.</p>
+
+<h3 id="options-inherited-from-parent-commands">Options inherited from parent commands</h3>
+
+<p><code>--account, -A</code> - Account to use in config file [env EXOSCALE_ACCOUNT]<br />
+<code>--config, -C</code> - Specify an alternate config file [env EXOSCALE_CONFIG]</p>
+
+<h3 id="see-also">SEE ALSO</h3>
+
+<ul>
+<li><a href="/egoscale/cli/exo_dns_add/">exo dns add</a>  - Add record to domain<br />
+<br /></li>
+</ul>
+  </div>
+</div>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

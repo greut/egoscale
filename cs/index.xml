@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs - the Exoscale companion for CloudStack on Egoscale, the Go toolbox for Exoscale</title>
+    <link>https://exoscale.github.io/egoscale/cs/</link>
+    <description>Recent content in cs - the Exoscale companion for CloudStack on Egoscale, the Go toolbox for Exoscale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Oct 2018 07:21:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://exoscale.github.io/egoscale/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cs activateIp6</title>
+      <link>https://exoscale.github.io/egoscale/cs/activateip6/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/activateip6/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs addIpToNic</title>
+      <link>https://exoscale.github.io/egoscale/cs/addiptonic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/addiptonic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs addNicToVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/addnictovirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/addnictovirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs associateIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/associateipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/associateipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs authorizeSecurityGroupEgress</title>
+      <link>https://exoscale.github.io/egoscale/cs/authorizesecuritygroupegress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/authorizesecuritygroupegress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs authorizeSecurityGroupIngress</title>
+      <link>https://exoscale.github.io/egoscale/cs/authorizesecuritygroupingress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/authorizesecuritygroupingress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs changeServiceForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/changeserviceforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/changeserviceforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs copyTemplate</title>
+      <link>https://exoscale.github.io/egoscale/cs/copytemplate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/copytemplate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createAffinityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/createaffinitygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createaffinitygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createInstanceGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/createinstancegroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createinstancegroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createNetwork</title>
+      <link>https://exoscale.github.io/egoscale/cs/createnetwork/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createnetwork/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createSSHKeyPair</title>
+      <link>https://exoscale.github.io/egoscale/cs/createsshkeypair/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createsshkeypair/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createSecurityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/createsecuritygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createsecuritygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createSnapshot</title>
+      <link>https://exoscale.github.io/egoscale/cs/createsnapshot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createsnapshot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createTags</title>
+      <link>https://exoscale.github.io/egoscale/cs/createtags/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createtags/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createTemplate</title>
+      <link>https://exoscale.github.io/egoscale/cs/createtemplate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createtemplate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs createUser</title>
+      <link>https://exoscale.github.io/egoscale/cs/createuser/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/createuser/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteAffinityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/deleteaffinitygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deleteaffinitygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteInstanceGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/deleteinstancegroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deleteinstancegroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteNetwork</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletenetwork/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletenetwork/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteReverseDnsFromPublicIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletereversednsfrompublicipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletereversednsfrompublicipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteReverseDnsFromVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletereversednsfromvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletereversednsfromvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteSSHKeyPair</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletesshkeypair/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletesshkeypair/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteSecurityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletesecuritygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletesecuritygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteSnapshot</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletesnapshot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletesnapshot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteTags</title>
+      <link>https://exoscale.github.io/egoscale/cs/deletetags/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deletetags/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deleteUser</title>
+      <link>https://exoscale.github.io/egoscale/cs/deleteuser/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deleteuser/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs deployVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/deployvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/deployvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs destroyVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/destroyvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/destroyvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs disableAccount</title>
+      <link>https://exoscale.github.io/egoscale/cs/disableaccount/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/disableaccount/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs disassociateIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/disassociateipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/disassociateipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs enableAccount</title>
+      <link>https://exoscale.github.io/egoscale/cs/enableaccount/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/enableaccount/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs expungeVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/expungevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/expungevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs getVMPassword</title>
+      <link>https://exoscale.github.io/egoscale/cs/getvmpassword/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/getvmpassword/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs getVirtualMachineUserData</title>
+      <link>https://exoscale.github.io/egoscale/cs/getvirtualmachineuserdata/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/getvirtualmachineuserdata/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listAccounts</title>
+      <link>https://exoscale.github.io/egoscale/cs/listaccounts/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listaccounts/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listAffinityGroups</title>
+      <link>https://exoscale.github.io/egoscale/cs/listaffinitygroups/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listaffinitygroups/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listApis</title>
+      <link>https://exoscale.github.io/egoscale/cs/listapis/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listapis/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listAsyncJobs</title>
+      <link>https://exoscale.github.io/egoscale/cs/listasyncjobs/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listasyncjobs/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listEvents</title>
+      <link>https://exoscale.github.io/egoscale/cs/listevents/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listevents/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listHosts</title>
+      <link>https://exoscale.github.io/egoscale/cs/listhosts/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listhosts/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listInstanceGroups</title>
+      <link>https://exoscale.github.io/egoscale/cs/listinstancegroups/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listinstancegroups/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listNetworkOfferings</title>
+      <link>https://exoscale.github.io/egoscale/cs/listnetworkofferings/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listnetworkofferings/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listNetworks</title>
+      <link>https://exoscale.github.io/egoscale/cs/listnetworks/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listnetworks/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listNics</title>
+      <link>https://exoscale.github.io/egoscale/cs/listnics/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listnics/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listOsCategories</title>
+      <link>https://exoscale.github.io/egoscale/cs/listoscategories/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listoscategories/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listPublicIpAddresses</title>
+      <link>https://exoscale.github.io/egoscale/cs/listpublicipaddresses/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listpublicipaddresses/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listResourceDetails</title>
+      <link>https://exoscale.github.io/egoscale/cs/listresourcedetails/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listresourcedetails/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listResourceLimits</title>
+      <link>https://exoscale.github.io/egoscale/cs/listresourcelimits/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listresourcelimits/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listSSHKeyPairs</title>
+      <link>https://exoscale.github.io/egoscale/cs/listsshkeypairs/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listsshkeypairs/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listSecurityGroups</title>
+      <link>https://exoscale.github.io/egoscale/cs/listsecuritygroups/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listsecuritygroups/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listServiceOfferings</title>
+      <link>https://exoscale.github.io/egoscale/cs/listserviceofferings/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listserviceofferings/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listSnapshots</title>
+      <link>https://exoscale.github.io/egoscale/cs/listsnapshots/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listsnapshots/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listTags</title>
+      <link>https://exoscale.github.io/egoscale/cs/listtags/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listtags/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listTemplates</title>
+      <link>https://exoscale.github.io/egoscale/cs/listtemplates/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listtemplates/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listUsers</title>
+      <link>https://exoscale.github.io/egoscale/cs/listusers/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listusers/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listVirtualMachines</title>
+      <link>https://exoscale.github.io/egoscale/cs/listvirtualmachines/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listvirtualmachines/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listVolumes</title>
+      <link>https://exoscale.github.io/egoscale/cs/listvolumes/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listvolumes/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs listZones</title>
+      <link>https://exoscale.github.io/egoscale/cs/listzones/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/listzones/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs migrateVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/migratevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/migratevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs prepareTemplate</title>
+      <link>https://exoscale.github.io/egoscale/cs/preparetemplate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/preparetemplate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs queryAsyncJobResult</title>
+      <link>https://exoscale.github.io/egoscale/cs/queryasyncjobresult/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/queryasyncjobresult/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs queryReverseDnsForPublicIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/queryreversednsforpublicipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/queryreversednsforpublicipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs queryReverseDnsForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/queryreversednsforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/queryreversednsforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs rebootVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/rebootvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/rebootvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs recoverVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/recovervirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/recovervirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs registerSSHKeyPair</title>
+      <link>https://exoscale.github.io/egoscale/cs/registersshkeypair/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/registersshkeypair/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs registerTemplate</title>
+      <link>https://exoscale.github.io/egoscale/cs/registertemplate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/registertemplate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs registerUserKeys</title>
+      <link>https://exoscale.github.io/egoscale/cs/registeruserkeys/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/registeruserkeys/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs removeIpFromNic</title>
+      <link>https://exoscale.github.io/egoscale/cs/removeipfromnic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/removeipfromnic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs removeNicFromVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/removenicfromvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/removenicfromvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs resetPasswordForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/resetpasswordforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/resetpasswordforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs resetSSHKeyForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/resetsshkeyforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/resetsshkeyforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs resizeVolume</title>
+      <link>https://exoscale.github.io/egoscale/cs/resizevolume/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/resizevolume/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs restartNetwork</title>
+      <link>https://exoscale.github.io/egoscale/cs/restartnetwork/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/restartnetwork/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs restoreVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/restorevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/restorevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs revertSnapshot</title>
+      <link>https://exoscale.github.io/egoscale/cs/revertsnapshot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/revertsnapshot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs revokeSecurityGroupEgress</title>
+      <link>https://exoscale.github.io/egoscale/cs/revokesecuritygroupegress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/revokesecuritygroupegress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs revokeSecurityGroupIngress</title>
+      <link>https://exoscale.github.io/egoscale/cs/revokesecuritygroupingress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/revokesecuritygroupingress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs scaleVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/scalevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/scalevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs startVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/startvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/startvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs stopVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/stopvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/stopvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateDefaultNicForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatedefaultnicforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatedefaultnicforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateHost</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatehost/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatehost/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateInstanceGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/updateinstancegroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updateinstancegroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/updateipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updateipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateNetwork</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatenetwork/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatenetwork/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateReverseDnsForPublicIpAddress</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatereversednsforpublicipaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatereversednsforpublicipaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateReverseDnsForVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatereversednsforvirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatereversednsforvirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateUser</title>
+      <link>https://exoscale.github.io/egoscale/cs/updateuser/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updateuser/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateVMAffinityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatevmaffinitygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatevmaffinitygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cs updateVmNicIp</title>
+      <link>https://exoscale.github.io/egoscale/cs/updatevmnicip/</link>
+      <pubDate>Fri, 19 Oct 2018 07:21:50 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cs/updatevmnicip/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

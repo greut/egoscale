@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="section">
+<div class="container">
+    <div class="content">
+      
+
+<h1 id="cs-command-line-interface-for-cloudstack">cs: Command-Line Interface for CloudStack</h1>
+
+<p>Like the Pythonic <a href="https://pypi.python.org/pypi/cs">cs</a> but in Go.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Grab it from the <a href="https://github.com/exoscale/egoscale/releases">release section</a>.</p>
+
+<p>or build it yourself, it requires somes dependencies though to be pulled using <code>dep</code>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Create a config file <code>cloudstack.ini</code> or <code>$HOME/.cloudstack.ini</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#75715e">; Default region</span>
+<span style="color:#66d9ef">[cloudstack]</span>
+
+<span style="color:#75715e">; Exoscale credential</span>
+<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https://api.exoscale.ch/compute</span>
+<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">EXO...</span>
+<span style="color:#a6e22e">secret</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">...</span>
+
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">fruity</span>
+
+
+<span style="color:#75715e">; Another region</span>
+<span style="color:#66d9ef">[cloudstack:production]</span>
+
+<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https://api.exoscale.ch/compute</span>
+<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">EXO...</span>
+<span style="color:#a6e22e">secret</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">...</span>
+
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">vim</span>
+
+
+<span style="color:#75715e">; global config for themes</span>
+<span style="color:#66d9ef">[exoscale]</span>
+<span style="color:#75715e">; Pygments theme, see: https://xyproto.github.io/splash/docs/</span>
+<span style="color:#75715e">; dark</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">monokai</span>
+<span style="color:#75715e">; light</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">tango</span>
+<span style="color:#75715e">; no colors (only boldness is allowed)</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">nocolors</span></code></pre></div>
+<h3 id="themes">Themes</h3>
+
+<p>Thanks to <a href="http://swapoff.org/">Alec Thomas</a>&rsquo; <a href="https://github.com/alecthomas/chroma">chroma</a>, it supports many themes for your output:</p>
+
+<ul>
+<li><a href="https://xyproto.github.io/splash/docs/">https://xyproto.github.io/splash/docs/</a><br /></li>
+<li><a href="https://help.farbox.com/pygments.html">https://help.farbox.com/pygments.html</a><br />
+<br /></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Some of the flags around a command.</p>
+
+<pre><code>$ cs (-h | --help)              global help
+$ cs &lt;command&gt; (-h | --help)    help of a specific command
+$ cs &lt;command&gt; (-d | --debug)   show the command and its expected output
+$ cs &lt;command&gt; (-D | --dry-run) show the signed command
+$ cs (-r | --region) &lt;region&gt;   specify a different region, default `cloudstack`
+</code></pre>
+
+    </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+    <h3 class="title">Commands</h3>
+    <ul>
+          
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listhosts/">cs listHosts</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists hosts. &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/listHosts.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listinstancegroups/">cs listInstanceGroups</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists vm groups &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listInstanceGroups.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listnetworkofferings/">cs listNetworkOfferings</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all available network offerings. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listNetworkOfferings.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listnetworks/">cs listNetworks</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all available networks. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listNetworks.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listnics/">cs listNics</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">list the vm nics  IP to NIC &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listNics.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listoscategories/">cs listOsCategories</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all supported OS categories for this cloud. &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/listOsCategories.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listpublicipaddresses/">cs listPublicIpAddresses</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all public ip addresses &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listPublicIpAddresses.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listresourcedetails/">cs listResourceDetails</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List resource detail(s) &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listResourceDetails.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listresourcelimits/">cs listResourceLimits</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists resource limits. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listResourceLimits.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listsshkeypairs/">cs listSSHKeyPairs</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List registered keypairs &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listSSHKeyPairs.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listsecuritygroups/">cs listSecurityGroups</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists security groups &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listSecurityGroups.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listserviceofferings/">cs listServiceOfferings</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all available service offerings. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listServiceOfferings.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listsnapshots/">cs listSnapshots</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all available snapshots for the account. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listSnapshots.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listtags/">cs listTags</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List resource tag(s) &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listTags.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listtemplates/">cs listTemplates</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List all public, private, and privileged templates. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listTemplates.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listusers/">cs listUsers</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists user accounts &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listUsers.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listvirtualmachines/">cs listVirtualMachines</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">List the virtual machines owned by the account. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listVirtualMachines.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listvolumes/">cs listVolumes</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all volumes. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listVolumes.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listzones/">cs listZones</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists zones &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listZones.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/migratevirtualmachine/">cs migrateVirtualMachine</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Attempts Migration of a VM to a different host or Root volume of the vm to a different storage pool &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/migrateVirtualMachine.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+    </ul>
+
+    
+
+<nav class="pagination" role="navigation" aria-label="pagination">
+<ul class="pagination-list">
+    
+    <li>
+        <a class="pagination-link" href="/egoscale/cs/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    >
+    <a class="pagination-link" href="/egoscale/cs/page/2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    active"><a href="/egoscale/cs/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/page/4/">4</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/page/5/">5</a></li>
+    
+    
+    <li
+    >
+    <a class="pagination-link" href="/egoscale/cs/page/4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a class="pagination-link" href="/egoscale/cs/page/5/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</nav>
+
+
+</div>
+</section>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

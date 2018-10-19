@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Egoscale, the Go toolbox for Exoscale</title>
+    <link>https://exoscale.github.io/egoscale/cli/</link>
+    <description>Recent content on Egoscale, the Go toolbox for Exoscale</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Oct 2018 07:22:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://exoscale.github.io/egoscale/cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>exo</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo affinitygroup</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_affinitygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_affinitygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo affinitygroup create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo affinitygroup delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo affinitygroup list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_affinitygroup_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api account</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_account/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_account/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api account list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_account_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_account_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address associate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_associate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_associate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address deleteReverseDNSFromAddress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_deletereversednsfromaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_deletereversednsfromaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address disassociate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_disassociate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_disassociate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address queryReverseDNSForAddress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_queryreversednsforaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_queryreversednsforaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address update</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_update/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_update/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api address updateReverseDNSForAddress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_address_updatereversednsforaddress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_address_updatereversednsforaddress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api affinity-group</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api affinity-group create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api affinity-group delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api affinity-group list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_affinity-group_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api api</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_api/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_api/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api api list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_api_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_api_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api async-job</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_async-job/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_async-job/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api async-job listAsyncJobs</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_async-job_listasyncjobs/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_async-job_listasyncjobs/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api async-job queryAsyncJobResult</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_async-job_queryasyncjobresult/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_async-job_queryasyncjobresult/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api event</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_event/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_event/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api event list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_event_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_event_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api event listType</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_event_listtype/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_event_listtype/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network listNetworkOfferings</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network_listnetworkofferings/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network_listnetworkofferings/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api network update</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_network_update/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_network_update/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api nic</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_nic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_nic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api nic activateIp6</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_nic_activateip6/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_nic_activateip6/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api nic addIpToNic</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_nic_addiptonic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_nic_addiptonic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api nic list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_nic_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_nic_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api nic removeIpFromNic</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_nic_removeipfromnic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_nic_removeipfromnic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api offering</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_offering/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_offering/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api offering list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_offering_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_offering_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api offering listDetails</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_offering_listdetails/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_offering_listdetails/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api offering listLimits</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_offering_listlimits/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_offering_listlimits/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group authorizeEgress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_authorizeegress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_authorizeegress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group authorizeIngress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_authorizeingress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_authorizeingress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group revokeEgress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_revokeegress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_revokeegress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api security-group revokeIngress</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_security-group_revokeingress/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_security-group_revokeingress/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api snapshot</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_snapshot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_snapshot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api snapshot create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api snapshot delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api snapshot list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api snapshot revert</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_revert/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_snapshot_revert/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh register</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh_register/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh_register/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api ssh reset</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_ssh_reset/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_ssh_reset/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api tag</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_tag/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_tag/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api tag create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_tag_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_tag_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api tag delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_tag_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_tag_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api tag list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_tag_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_tag_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api template</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_template/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_template/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api template list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_template_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_template_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api user</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_user/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_user/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api user list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_user_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_user_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api user registerUserKeys</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_user_registeruserkeys/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_user_registeruserkeys/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm addNic</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_addnic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_addnic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm changeService</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_changeservice/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_changeservice/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm deleteReverseDNSFromVM</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_deletereversednsfromvm/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_deletereversednsfromvm/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm deploy</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_deploy/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_deploy/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm destroy</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_destroy/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_destroy/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm expunge</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_expunge/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_expunge/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm getPassword</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_getpassword/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_getpassword/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm getUserData</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_getuserdata/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_getuserdata/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm migrateVirtualMachine</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_migratevirtualmachine/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_migratevirtualmachine/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm queryReverseDNSForVM</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_queryreversednsforvm/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_queryreversednsforvm/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm reboot</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_reboot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_reboot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm recover</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_recover/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_recover/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm removeNic</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_removenic/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_removenic/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm resetPassword</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_resetpassword/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_resetpassword/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm restore</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_restore/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_restore/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm scale</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_scale/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_scale/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm start</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_start/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_start/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm stop</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_stop/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_stop/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm update</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_update/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_update/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm updateReverseDNSForVM</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatereversednsforvm/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatereversednsforvm/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm updateVMAffinityGroup</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatevmaffinitygroup/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatevmaffinitygroup/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm updateVMNicIP</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatevmnicip/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm_updatevmnicip/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm-group</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm-group/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm-group/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm-group create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm-group_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm-group_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api vm-group list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_vm-group_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_vm-group_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api volume</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_volume/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_volume/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api volume list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_volume_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_volume_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api volume resize</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_volume_resize/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_volume_resize/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api zone</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_zone/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_zone/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo api zone list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_api_zone_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_api_zone_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo config</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_config/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_config/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo config delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_config_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_config_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo config list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_config_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_config_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo config set</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_config_set/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_config_set/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo config show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_config_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_config_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add A</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_a/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_a/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add AAAA</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_aaaa/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_aaaa/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add ALIAS</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_alias/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_alias/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add CNAME</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_cname/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_cname/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add HINFO</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_hinfo/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_hinfo/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add MX</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_mx/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_mx/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add NAPTR</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_naptr/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_naptr/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add NS</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_ns/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_ns/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add POOL</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_pool/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_pool/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add SRV</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_srv/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_srv/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add SSHFP</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_sshfp/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_sshfp/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add TXT</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_txt/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_txt/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns add URL</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_add_url/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_add_url/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update A</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_a/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_a/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update AAAA</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_aaaa/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_aaaa/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update ALIAS</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_alias/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_alias/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update CNAME</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_cname/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_cname/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update HINFO</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_hinfo/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_hinfo/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update MX</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_mx/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_mx/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update NAPTR</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_naptr/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_naptr/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update NS</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_ns/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_ns/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update POOL</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_pool/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_pool/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update SPF</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_spf/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_spf/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update SRV</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_srv/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_srv/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update SSHFP</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_sshfp/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_sshfp/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update TXT</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_txt/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_txt/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo dns update URL</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_dns_update_url/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_dns_update_url/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip associate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_associate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_associate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip dissociate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_dissociate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_dissociate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo eip show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_eip_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_eip_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall add</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_add/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_add/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo firewall show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_firewall_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_firewall_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet associate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_associate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_associate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet dissociate</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_dissociate/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_dissociate/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo privnet update</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_privnet_update/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_privnet_update/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos acl</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_acl/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_acl/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos acl add</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_acl_add/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_acl_add/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos acl list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_acl_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_acl_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos acl remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_acl_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_acl_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos download</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_download/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_download/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos header</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_header/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_header/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos header add</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_header_add/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_header_add/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos header list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_header_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_header_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos header remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_header_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_header_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos metadata</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_metadata/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_metadata/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos metadata add</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_add/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_add/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos metadata list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos metadata remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_metadata_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos remove</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_remove/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_remove/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sos upload</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sos_upload/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sos_upload/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo ssh</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_ssh/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_ssh/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sshkey</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sshkey/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sshkey/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sshkey create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sshkey_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sshkey_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sshkey delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sshkey_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sshkey_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sshkey list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sshkey_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sshkey_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo sshkey upload</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_sshkey_upload/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_sshkey_upload/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo template</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_template/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_template/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo template list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_template_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_template_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo template show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_template_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_template_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo version</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_version/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_version/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm create</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_create/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_create/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm delete</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_delete/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_delete/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm list</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_list/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_list/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm reboot</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_reboot/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_reboot/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm reset</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_reset/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_reset/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm resize</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_resize/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_resize/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm scale</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_scale/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_scale/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm serviceoffering</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_serviceoffering/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_serviceoffering/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm show</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_show/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_show/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm start</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_start/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_start/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo vm stop</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_vm_stop/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_vm_stop/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>exo zone</title>
+      <link>https://exoscale.github.io/egoscale/cli/exo_zone/</link>
+      <pubDate>Fri, 19 Oct 2018 07:22:09 +0000</pubDate>
+      
+      <guid>https://exoscale.github.io/egoscale/cli/exo_zone/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  cs registerTemplate &ndash; Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="hero is-light is-bold">
+<div class="hero-body">
+<div class="container">
+  <h1 class="title is-1 is-spaced">cs registerTemplate</h1>
+  <p class="subtitle">Registers an existing template into the CloudStack cloud. <a href="http://cloudstack.apache.org/api/apidocs-4.4/root_admin/registerTemplate.html">http://cloudstack.apache.org/api/apidocs-4.4/root_admin/registerTemplate.html</a></p>
+</div>
+</div>
+</section>
+
+<div class="container">
+  <div class="content">
+    <p></p>
+
+<h2 id="flags">Flags</h2>
+
+<p><code>--account value</code> &ndash; an optional accountName. Must be used with domainid.<br />
+<code>--bits value</code> &ndash; 32 or 64 bits support. 64 by default (default: 0)<br />
+<code>--checksum value</code> &ndash; the MD5 checksum value of this template<br />
+<code>--details value</code> &ndash; Template details in key/value pairs.<br />
+<code>--displaytext value</code> &ndash; (<strong>required</strong>) the display text of the template. This is usually used for display purposes.<br />
+<code>--domainid value</code> &ndash; an optional domainid. If the account parameter is used, domainid must also be used.<br />
+<code>--format value</code> &ndash; (<strong>required</strong>) the format for the template. Possible values include QCOW2, RAW, and VHD.<br />
+<code>--hypervisor value</code> &ndash; (<strong>required</strong>) the target hypervisor for the template<br />
+<code>--isdynamicallyscalable value</code> &ndash; true if template contains XS/VMWare tools inorder to support dynamic scaling of VM cpu/memory (default: unset)<br />
+<code>--isextractable value</code> &ndash; true if the template or its derivatives are extractable; default is false (default: unset)<br />
+<code>--isfeatured value</code> &ndash; true if this template is a featured template, false otherwise (default: unset)<br />
+<code>--ispublic value</code> &ndash; true if the template is available to all accounts; default is true (default: unset)<br />
+<code>--isrouting value</code> &ndash; true if the template type is routing i.e., if template is used to deploy router (default: unset)<br />
+<code>--issystem value</code> &ndash; true if the template type is system i.e., if template is used to deploy system VM (default: unset)<br />
+<code>--name value</code> &ndash; (<strong>required</strong>) the name of the template<br />
+<code>--ostypeid value</code> &ndash; (<strong>required</strong>) the ID of the OS Type that best represents the OS of this template.<br />
+<code>--passwordenabled value</code> &ndash; true if the template supports the password reset feature; default is false (default: unset)<br />
+<code>--requireshvm value</code> &ndash; true if this template requires HVM (default: unset)<br />
+<code>--sshkeyenabled value</code> &ndash; true if the template supports the sshkey upload feature; default is false (default: unset)<br />
+<code>--templatetag value</code> &ndash; the tag for this template.<br />
+<code>--url value</code> &ndash; (<strong>required</strong>) the URL of where the template is hosted. Possible URL include http:// and https://<br />
+<code>--zoneid value</code> &ndash; (<strong>required</strong>) the ID of the zone the template is to be hosted on</p>
+
+<h2 id="global-flags">Global Flags</h2>
+
+<p><code>--debug, -d</code> &ndash; debug mode on<br />
+<code>--region value, -r value</code> &ndash; cloudstack.ini file section name<br />
+<code>--theme value, -t value</code> &ndash; syntax highlighting theme, see: <a href="https://xyproto.github.io/splash/docs/">https://xyproto.github.io/splash/docs/</a><br />
+<code>--help, -h</code> &ndash; show help<br />
+<code>--version, -v</code> &ndash; print the version</p>
+
+<h6 id="auto-generated-by-urfave-cli-on-19-oct-2018">Auto generated by urfave/cli on 19-Oct-2018</h6>
+  </div>
+</div>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

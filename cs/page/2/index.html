@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="section">
+<div class="container">
+    <div class="content">
+      
+
+<h1 id="cs-command-line-interface-for-cloudstack">cs: Command-Line Interface for CloudStack</h1>
+
+<p>Like the Pythonic <a href="https://pypi.python.org/pypi/cs">cs</a> but in Go.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Grab it from the <a href="https://github.com/exoscale/egoscale/releases">release section</a>.</p>
+
+<p>or build it yourself, it requires somes dependencies though to be pulled using <code>dep</code>.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Create a config file <code>cloudstack.ini</code> or <code>$HOME/.cloudstack.ini</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#75715e">; Default region</span>
+<span style="color:#66d9ef">[cloudstack]</span>
+
+<span style="color:#75715e">; Exoscale credential</span>
+<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https://api.exoscale.ch/compute</span>
+<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">EXO...</span>
+<span style="color:#a6e22e">secret</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">...</span>
+
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">fruity</span>
+
+
+<span style="color:#75715e">; Another region</span>
+<span style="color:#66d9ef">[cloudstack:production]</span>
+
+<span style="color:#a6e22e">endpoint</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">https://api.exoscale.ch/compute</span>
+<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">EXO...</span>
+<span style="color:#a6e22e">secret</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">...</span>
+
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">vim</span>
+
+
+<span style="color:#75715e">; global config for themes</span>
+<span style="color:#66d9ef">[exoscale]</span>
+<span style="color:#75715e">; Pygments theme, see: https://xyproto.github.io/splash/docs/</span>
+<span style="color:#75715e">; dark</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">monokai</span>
+<span style="color:#75715e">; light</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">tango</span>
+<span style="color:#75715e">; no colors (only boldness is allowed)</span>
+<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">nocolors</span></code></pre></div>
+<h3 id="themes">Themes</h3>
+
+<p>Thanks to <a href="http://swapoff.org/">Alec Thomas</a>&rsquo; <a href="https://github.com/alecthomas/chroma">chroma</a>, it supports many themes for your output:</p>
+
+<ul>
+<li><a href="https://xyproto.github.io/splash/docs/">https://xyproto.github.io/splash/docs/</a><br /></li>
+<li><a href="https://help.farbox.com/pygments.html">https://help.farbox.com/pygments.html</a><br />
+<br /></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Some of the flags around a command.</p>
+
+<pre><code>$ cs (-h | --help)              global help
+$ cs &lt;command&gt; (-h | --help)    help of a specific command
+$ cs &lt;command&gt; (-d | --debug)   show the command and its expected output
+$ cs &lt;command&gt; (-D | --dry-run) show the signed command
+$ cs (-r | --region) &lt;region&gt;   specify a different region, default `cloudstack`
+</code></pre>
+
+    </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+    <h3 class="title">Commands</h3>
+    <ul>
+          
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletereversednsfrompublicipaddress/">cs deleteReverseDnsFromPublicIpAddress</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">delete the PTR DNS record from the public IP address &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteReverseDnsFromPublicIpAddress.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletereversednsfromvirtualmachine/">cs deleteReverseDnsFromVirtualMachine</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Delete the PTR DNS record(s) from the virtual machine &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteReverseDnsFromVirtualMachine.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletesshkeypair/">cs deleteSSHKeyPair</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Deletes a keypair by name &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteSSHKeyPair.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletesecuritygroup/">cs deleteSecurityGroup</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Deletes security group &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteSecurityGroup.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletesnapshot/">cs deleteSnapshot</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Deletes a snapshot of a disk volume. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteSnapshot.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deletetags/">cs deleteTags</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Deleting resource tag(s) &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deleteTags.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deleteuser/">cs deleteUser</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Deletes a user for an account &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/deleteUser.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/deployvirtualmachine/">cs deployVirtualMachine</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Creates and automatically starts a virtual machine based on a service offering, disk offering, and template. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/deployVirtualMachine.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/destroyvirtualmachine/">cs destroyVirtualMachine</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Destroys a virtual machine. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/destroyVirtualMachine.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/disableaccount/">cs disableAccount</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Disables an account &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/disableAccount.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/disassociateipaddress/">cs disassociateIpAddress</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Disassociates an ip address from the account. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/disassociateIpAddress.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/enableaccount/">cs enableAccount</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Enables an account &lt;http://cloudstack.apache.org/api/apidocs-4.4/root_admin/enableAccount.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/expungevirtualmachine/">cs expungeVirtualMachine</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Expunge a virtual machine. Once expunged, it cannot be recoverd. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/expungeVirtualMachine.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/getvmpassword/">cs getVMPassword</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Returns an encrypted password for the VM &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/getVMPassword.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/getvirtualmachineuserdata/">cs getVirtualMachineUserData</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Returns user data associated with the VM &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/getVirtualMachineUserData.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listaccounts/">cs listAccounts</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists accounts and provides detailed account information for listed accounts &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listAccounts.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listaffinitygroups/">cs listAffinityGroups</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists affinity groups &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listAffinityGroups.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listapis/">cs listApis</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">lists all available apis on the server &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listApis.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listasyncjobs/">cs listAsyncJobs</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">Lists all pending asynchronous jobs for the account. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listAsyncJobs.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+                <li><article class="media" style="margin-bottom:1rem">
+    <div class="media-content">
+    <div class="content">
+        <h4 class="title is-5">
+            <a href="https://exoscale.github.io/egoscale/cs/listevents/">cs listEvents</a>
+        </h4>
+        <p class="subtitle is-6 is-spaced">A command to list events. &lt;http://cloudstack.apache.org/api/apidocs-4.4/user/listEvents.html&gt;</p>
+    </div>
+    </div>
+</article>
+</li>
+          
+    </ul>
+
+    
+
+<nav class="pagination" role="navigation" aria-label="pagination">
+<ul class="pagination-list">
+    
+    <li>
+        <a class="pagination-link" href="/egoscale/cs/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    >
+    <a class="pagination-link" href="/egoscale/cs/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    active"><a href="/egoscale/cs/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/page/3/">3</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-ellipsis disabled"><span aria-hidden="true">&hellip;</span></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="pagination-link
+    "><a href="/egoscale/cs/page/5/">5</a></li>
+    
+    
+    <li
+    >
+    <a class="pagination-link" href="/egoscale/cs/page/3/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a class="pagination-link" href="/egoscale/cs/page/5/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+</nav>
+
+
+</div>
+</section>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>

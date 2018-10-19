@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>
+  exo vm create &ndash; Egoscale, the Go toolbox for Exoscale
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+<meta http-equiv="refresh" content="0; url=/cli/exo_vm_create">
+
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://exoscale.github.io/egoscale">Egoscale library</a>
+        </div>
+        <div class="navbar-start navbar-menu is-active">
+            
+
+  
+
+  
+
+  
+    <a class="navbar-item" href="https://godoc.org/github.com/exoscale/egoscale/" title="">godoc</a>
+  
+
+  
+    <a class="navbar-item" href="https://github.com/exoscale/egoscale/" title="">source</a>
+  
+
+
+        </div>
+        <div class="navbar-end is-right navbar-menu">
+            <div style="margin-top:.7rem">
+                <a class="button is-primary" href="https://github.com/exoscale/egoscale/releases">
+                    <span class="icon"><i class="fas fa-download"></i></span>
+                    <span>Download</span>
+                </a>
+                <iframe src="https://ghbtns.com/github-btn.html?user=exoscale&repo=egoscale&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    
+<section class="hero is-light is-bold">
+<div class="hero-body">
+<div class="container">
+  <h1 class="title is-1 is-spaced">exo vm create</h1>
+  <p class="subtitle">Create and deploy a virtual machine</p>
+</div>
+</div>
+</section>
+
+<div class="container">
+  <div class="content">
+    <p></p>
+
+<pre><code>exo vm create &lt;vm name&gt;+ [flags]
+</code></pre>
+
+<h3 id="options">Options</h3>
+
+<p><code>--anti-affinity-group, -a</code> - &lt;name | id, name | id, &hellip;&gt;<br />
+<code>--cloud-init-file, -f</code> - Deploy instance with a cloud-init file<br />
+<code>--disk, -d</code> - &lt;disk size&gt;<br />
+<code>--help, -h</code> - help for create<br />
+<code>--ipv6, -6</code> - enable ipv6<br />
+<code>--keypair, -k</code> - &lt;ssh keys name&gt;<br />
+<code>--privnet, -p</code> - &lt;name | id, name | id, &hellip;&gt;<br />
+<code>--security-group, -s</code> - &lt;name | id, name | id, &hellip;&gt;<br />
+<code>--service-offering, -o</code> - &lt;name | id&gt; (micro|tiny|small|medium|large|extra-large|huge|mega|titan<br />
+<code>--template, -t</code> - &lt;template name | id&gt; (default: Linux Ubuntu 18.04 LTS 64-bit)<br />
+<code>--zone, -z</code> - &lt;zone name | id | keyword&gt; (ch-dk-2|ch-gva-2|at-vie-1|de-fra-1)</p>
+
+<h3 id="options-inherited-from-parent-commands">Options inherited from parent commands</h3>
+
+<p><code>--account, -A</code> - Account to use in config file [env EXOSCALE_ACCOUNT]<br />
+<code>--config, -C</code> - Specify an alternate config file [env EXOSCALE_CONFIG]</p>
+
+<h3 id="see-also">SEE ALSO</h3>
+
+<ul>
+<li><a href="/egoscale/cli/exo_vm/">exo vm</a>    - Virtual machines management<br />
+<br /></li>
+</ul>
+  </div>
+</div>
+
+</main>
+
+
+
+<footer class="footer" style="clear:both">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>Made with ❤️ in Crissier, Switzerland 🇨🇭.</p>
+            <p>Gopher made with <a href="https://gopherize.me/">Gopherize.me</a>.
+            Hosted on <a href="https://github.com/exoscale/egoscale">GitHub</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
