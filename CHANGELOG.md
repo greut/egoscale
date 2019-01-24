@@ -5,6 +5,7 @@ Changelog
 ------
 
 - change: export `BooleanResponse`
+- fix: `(*VirtualMachine)IP()` to return `net.IP`
 
 0.13.3
 ------

@@ -154,11 +154,10 @@ func (vm VirtualMachine) DefaultNic() *Nic {
 }
 
 // IP returns the default nic IP address
-func (vm VirtualMachine) IP() *net.IP {
+func (vm VirtualMachine) IP() net.IP {
 	nic := vm.DefaultNic()
 	if nic != nil {
-		ip := nic.IPAddress
-		return &ip
+		return nic.IPAddress
 	}
 
 	return nil
