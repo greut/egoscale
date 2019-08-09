@@ -39,6 +39,7 @@ func responseKey(key string) (string, bool) {
 		"activateip6response":           "activateip6nicresponse",
 		"restorevirtualmachineresponse": "restorevmresponse",
 		"updatevmaffinitygroupresponse": "updatevirtualmachineresponse",
+		"updatednsdomainrecordresponse": "getdnsdomainrecordresponse",
 	}
 
 	k, ok := responseKeys[key]

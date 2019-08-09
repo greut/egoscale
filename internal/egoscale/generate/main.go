@@ -19,7 +19,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/exoscale/egoscale"
+	"github.com/exoscale/egoscale/internal/egoscale"
 )
 
 // must be sorted

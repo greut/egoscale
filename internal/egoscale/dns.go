@@ -15,7 +15,7 @@ import (
 type DNSDomain struct {
 	ID             int64  `json:"id"`
 	Name           string `json:"name"`
-	UnicodeName    string `json:"unicode_name"`
+	UnicodeName    string `json:"unicodename"`
 	Token          string `json:"token"`
 	State          string `json:"state"`
 	Language       string `json:"language,omitempty"`
@@ -44,30 +44,12 @@ type DNSRecord struct {
 	UpdatedAt  string `json:"updated_at,omitempty"`
 	Content    string `json:"content"`
 	RecordType string `json:"record_type"`
-	Prio       int    `json:"prio,omitempty"`
+	Priority   int    `json:"prio,omitempty"`
 }
 
 // DNSRecordResponse represents the creation of a DNS record
 type DNSRecordResponse struct {
 	Record DNSRecord `json:"record"`
-}
-
-// UpdateDNSRecord represents a DNS record
-type UpdateDNSRecord struct {
-	ID         int64  `json:"id,omitempty"`
-	DomainID   int64  `json:"domain_id,omitempty"`
-	Name       string `json:"name,omitempty"`
-	TTL        int    `json:"ttl,omitempty"`
-	CreatedAt  string `json:"created_at,omitempty"`
-	UpdatedAt  string `json:"updated_at,omitempty"`
-	Content    string `json:"content,omitempty"`
-	RecordType string `json:"record_type,omitempty"`
-	Prio       int    `json:"prio,omitempty"`
-}
-
-// UpdateDNSRecordResponse represents the creation of a DNS record
-type UpdateDNSRecordResponse struct {
-	Record UpdateDNSRecord `json:"record"`
 }
 
 // DNSErrorResponse represents an error in the API

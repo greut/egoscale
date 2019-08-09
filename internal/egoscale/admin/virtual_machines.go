@@ -1,6 +1,6 @@
 package admin
 
-import "github.com/exoscale/egoscale"
+import "github.com/exoscale/egoscale/internal/egoscale"
 
 // VirtualMachine represents the enriched VirtualMachine in the admin world
 type VirtualMachine struct {
