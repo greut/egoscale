@@ -16,7 +16,7 @@ type Zone struct {
 	c *Client
 }
 
-// ListZones returns the list of available Exoscale zones, or an error if the API query failed.
+// ListZones returns the list of available Exoscale zones.
 func (c *Client) ListZones() ([]*Zone, error) {
 	res, err := c.c.ListWithContext(c.ctx, &egoapi.Zone{})
 	if err != nil {
@@ -25,13 +25,7 @@ func (c *Client) ListZones() ([]*Zone, error) {
 
 	zones := make([]*Zone, 0)
 	for _, i := range res {
-		zone := i.(*egoapi.Zone)
-		zones = append(zones, &Zone{
-			Resource: api.MarshalResource(zone),
-			ID:       zone.ID.String(),
-			Name:     zone.Name,
-			c:        c,
-		})
+		zones = append(zones, c.zoneFromAPI(i.(*egoapi.Zone)))
 	}
 
 	return zones, nil

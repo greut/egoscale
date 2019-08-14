@@ -31,6 +31,32 @@ func testClientFromEnv() (*Client, error) {
 	return NewClient(context.Background(), apiKey, apiSecret, apiEndpoint, false)
 }
 
+func securityGroupFixture(name, description string) (*egoapi.SecurityGroup, func() error, error) {
+	if name == "" {
+		name = "test-egoscale-" + testRandomString()
+	}
+
+	client, err := testClientFromEnv()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	res, err := client.c.Request(&egoapi.CreateSecurityGroup{
+		Name:        name,
+		Description: description,
+	})
+	if err != nil {
+		return nil, nil, err
+	}
+
+	return res.(*egoscale.SecurityGroup),
+		func() error {
+			_, err := client.c.Request(&egoapi.DeleteSecurityGroup{Name: name})
+			return err
+		},
+		err
+}
+
 func sshKeyFixture(name string) (*egoapi.SSHKeyPair, func() error, error) {
 	if name == "" {
 		name = "test-egoscale-" + testRandomString()

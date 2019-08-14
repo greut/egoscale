@@ -56,7 +56,7 @@ func (c *Client) RegisterSSHKey(name, publicKey string) (*SSHKey, error) {
 	return c.sshKeyFromAPI(res.(*egoapi.SSHKeyPair)), nil
 }
 
-// ListSSHKeys returns the list of available Exoscale zones, or an error if the API query failed.
+// ListSSHKeys returns the list of SSH keys.
 func (c *Client) ListSSHKeys() ([]*SSHKey, error) {
 	res, err := c.c.ListWithContext(c.ctx, &egoapi.SSHKeyPair{})
 	if err != nil {
@@ -65,14 +65,7 @@ func (c *Client) ListSSHKeys() ([]*SSHKey, error) {
 
 	sshKeys := make([]*SSHKey, 0)
 	for _, i := range res {
-		sshKey := i.(*egoapi.SSHKeyPair)
-		sshKeys = append(sshKeys, &SSHKey{
-			Resource:    api.MarshalResource(sshKey),
-			Name:        sshKey.Name,
-			Fingerprint: sshKey.Fingerprint,
-			PrivateKey:  sshKey.PrivateKey,
-			c:           c,
-		})
+		sshKeys = append(sshKeys, c.sshKeyFromAPI(i.(*egoapi.SSHKeyPair)))
 	}
 
 	return sshKeys, nil

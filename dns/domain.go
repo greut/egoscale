@@ -26,8 +26,7 @@ func (d *Domain) Records() ([]*DomainRecord, error) {
 
 	records := make([]*DomainRecord, 0)
 	for _, i := range res {
-		record := i.(*egoapi.DNSRecord)
-		records = append(records, d.c.domainRecordFromAPI(record, d))
+		records = append(records, d.c.domainRecordFromAPI(i.(*egoapi.DNSRecord), d))
 	}
 
 	return records, nil
@@ -84,14 +83,7 @@ func (c *Client) ListDomains() ([]*Domain, error) {
 
 	domains := make([]*Domain, 0)
 	for _, i := range res {
-		domain := i.(*egoapi.DNSDomain)
-		domains = append(domains, &Domain{
-			Resource:    api.MarshalResource(domain),
-			ID:          domain.ID,
-			Name:        domain.Name,
-			UnicodeName: domain.UnicodeName,
-			c:           c,
-		})
+		domains = append(domains, c.domainFromAPI(i.(*egoapi.DNSDomain)))
 	}
 
 	return domains, nil
