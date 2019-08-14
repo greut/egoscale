@@ -28,7 +28,7 @@ func (s *dnsDomainTestSuite) SetupTest() {
 	s.testDomainName = "example.net"
 }
 
-func (s *dnsDomainTestSuite) TestDNSDomainAddRecord() {
+func (s *dnsDomainTestSuite) TestDomainAddRecord() {
 	var (
 		recordName     = "test-egoscale"
 		recordType     = "MX"
@@ -61,7 +61,7 @@ func (s *dnsDomainTestSuite) TestDNSDomainAddRecord() {
 	assert.Equal(s.T(), recordTTL, record.TTL)
 }
 
-func (s *dnsDomainTestSuite) TestDNSDomainRecords() {
+func (s *dnsDomainTestSuite) TestDomainRecords() {
 	var (
 		recordName     = "test-egoscale"
 		recordType     = "MX"
@@ -107,7 +107,7 @@ func (s *dnsDomainTestSuite) TestDNSDomainRecords() {
 	}
 }
 
-func (s *dnsDomainTestSuite) TestCreateDNSDomain() {
+func (s *dnsDomainTestSuite) TestCreateDomain() {
 	var (
 		unicodeName          = "égzoskèle.ch"
 		unicodeNamePunycoded = "xn--gzoskle-6xad.ch"
@@ -154,7 +154,7 @@ func (s *dnsDomainTestSuite) TestListDomains() {
 	assert.GreaterOrEqual(s.T(), len(domains), 1)
 }
 
-func (s *dnsDomainTestSuite) TestGetDNSDomainByID() {
+func (s *dnsDomainTestSuite) TestGetDomainByID() {
 	res, teardown, err := domainFixture(s.testDomainName)
 	if err != nil {
 		s.FailNow("domain fixture setup failed", err)
@@ -172,7 +172,7 @@ func (s *dnsDomainTestSuite) TestGetDNSDomainByID() {
 	assert.Empty(s.T(), domain)
 }
 
-func (s *dnsDomainTestSuite) TestGetDNSDomainByName() {
+func (s *dnsDomainTestSuite) TestGetDomainByName() {
 	_, teardown, err := domainFixture(s.testDomainName)
 	if err != nil {
 		s.FailNow("domain fixture setup failed", err)
@@ -190,7 +190,7 @@ func (s *dnsDomainTestSuite) TestGetDNSDomainByName() {
 	assert.Empty(s.T(), domain)
 }
 
-func (s *dnsDomainTestSuite) TestDeleteDNSDomain() {
+func (s *dnsDomainTestSuite) TestDeleteDomain() {
 	res, _, err := domainFixture(s.testDomainName)
 	if err != nil {
 		s.FailNow("domain fixture setup failed", err)

@@ -64,7 +64,7 @@ func (d *Domain) Delete() error {
 	return nil
 }
 
-// CreateSSHKey creates a new DNS domain resource identified by name, and returns a Domain object if successful or an
+// CreateDomain creates a new DNS domain resource identified by name, and returns a Domain object if successful or an
 // error.
 func (c *Client) CreateDomain(name string) (*Domain, error) {
 	res, err := c.c.Request(&egoapi.CreateDNSDomain{Name: name})

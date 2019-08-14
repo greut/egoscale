@@ -27,7 +27,7 @@ func (s *dnsDomainRecordTestSuite) SetupTest() {
 	s.testDomainName = "example.net"
 }
 
-func (s *dnsDomainRecordTestSuite) TestDNSDomainRecordUpdate() {
+func (s *dnsDomainRecordTestSuite) TestDomainRecordUpdate() {
 	var (
 		recordName           = "test-egoscale"
 		recordNameEdited     = "test-egoscale-edited"
@@ -70,7 +70,7 @@ func (s *dnsDomainRecordTestSuite) TestDNSDomainRecordUpdate() {
 	assert.Equal(s.T(), recordTTLEdited, record.TTL)
 }
 
-func (s *dnsDomainRecordTestSuite) TestDNSDomainRecordDelete() {
+func (s *dnsDomainRecordTestSuite) TestDomainRecordDelete() {
 	var (
 		recordName     = "test-egoscale"
 		recordType     = "MX"
