@@ -9,6 +9,6 @@ const (
 	testBobAPISecret   = "bob_api_secret"
 )
 
-func testConfigFileFixture(path string, content string) error {
+func configFileFixture(path string, content string) error {
 	return ioutil.WriteFile(path, []byte(content), 0600)
 }

@@ -34,7 +34,7 @@ func (s *clientTestSuite) TestConfigFromProfile() {
 func (s *clientTestSuite) TestConfigFromFile() {
 	var file = path.Join(s.dir, "config.toml")
 
-	assert.Empty(s.T(), testConfigFileFixture(file, fmt.Sprintf(`
+	assert.Empty(s.T(), configFileFixture(file, fmt.Sprintf(`
 default_profile = "bob"
 
 [[profiles]]
@@ -146,7 +146,7 @@ func (s *clientTestSuite) TestNewClientNoConfigWithEnv() {
 func (s *clientTestSuite) TestNewClientNoConfigWithConfigFileEnv() {
 	var file = path.Join(s.dir, "config.toml")
 
-	assert.Empty(s.T(), testConfigFileFixture(file, fmt.Sprintf(`
+	assert.Empty(s.T(), configFileFixture(file, fmt.Sprintf(`
 [[profiles]]
 name = "alice"
 api_key = "%s"

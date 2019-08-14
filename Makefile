@@ -2,7 +2,8 @@ GOTEST ?= go test
 PKGS ?= . \
 	./compute \
 	./dns \
-	./storage
+	./storage \
+	./runstatus
 TESTOPTS = -v -timeout 120m -parallel 3
 
 lint:

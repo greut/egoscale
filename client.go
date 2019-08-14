@@ -8,15 +8,17 @@ import (
 	"github.com/exoscale/egoscale/compute"
 	"github.com/exoscale/egoscale/dns"
 	egoerr "github.com/exoscale/egoscale/error"
+	"github.com/exoscale/egoscale/runstatus"
 	"github.com/exoscale/egoscale/storage"
 	"github.com/pkg/errors" // TODO: replace with Go2-style error wrapping
 )
 
 // Client represents an Exoscale API client.
 type Client struct {
-	Compute *compute.Client
-	DNS     *dns.Client
-	Storage *storage.Client
+	Compute   *compute.Client
+	DNS       *dns.Client
+	Storage   *storage.Client
+	Runstatus *runstatus.Client
 
 	tracing bool
 }
@@ -147,10 +149,21 @@ func NewClient(cfs ...ConfigFunc) (*Client, error) {
 		return nil, errors.Wrap(err, "unable to initialize Storage API client")
 	}
 
+	runstatusClient, err := runstatus.NewClient(context.Background(),
+		profile.APIKey,
+		profile.APISecret,
+		profile.RunstatusAPIEndpoint,
+		tracing,
+	)
+	if err != nil {
+		return nil, errors.Wrap(err, "unable to initialize Runstatus API client")
+	}
+
 	return &Client{
-		Compute: computeClient,
-		DNS:     dnsClient,
-		Storage: storageClient,
-		tracing: tracing,
+		Compute:   computeClient,
+		DNS:       dnsClient,
+		Storage:   storageClient,
+		Runstatus: runstatusClient,
+		tracing:   tracing,
 	}, nil
 }

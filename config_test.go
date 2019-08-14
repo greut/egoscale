@@ -26,7 +26,7 @@ func (s *configTestSuite) TearDownSuite() {
 func (s *configTestSuite) TestLoadConfig() {
 	var file = path.Join(s.dir, "config.toml")
 
-	assert.Empty(s.T(), testConfigFileFixture(file, fmt.Sprintf(`
+	assert.Empty(s.T(), configFileFixture(file, fmt.Sprintf(`
 [[profiles]]
 name = "alice"
 api_key = "%s"
@@ -54,7 +54,7 @@ api_secret = "%s"
 func (s *configTestSuite) TestConfigGetProfile() {
 	var file = path.Join(s.dir, "config.toml")
 
-	assert.Empty(s.T(), testConfigFileFixture(file, fmt.Sprintf(`
+	assert.Empty(s.T(), configFileFixture(file, fmt.Sprintf(`
 [[profiles]]
 name = "alice"
 api_key = "%s"
