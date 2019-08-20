@@ -25,7 +25,32 @@ type SecurityGroupRule struct {
 	c *Client
 }
 
-// TODO: SecurityGroupRule.Delete()
+// Delete deletes the Security Group rule.
+func (r *SecurityGroupRule) Delete() error {
+	var req egoapi.Command
+
+	if r.Type == "ingress" {
+		req = egoapi.RevokeSecurityGroupIngress{ID: egoapi.MustParseUUID(r.ID)}
+	} else {
+		req = egoapi.RevokeSecurityGroupEgress{ID: egoapi.MustParseUUID(r.ID)}
+	}
+
+	if err := r.c.csError(r.c.c.BooleanRequestWithContext(r.c.ctx, req)); err != nil {
+		return err
+	}
+
+	r.ID = ""
+	r.Type = ""
+	r.Description = ""
+	r.NetworkCIDR = nil
+	r.SecurityGroup = nil
+	r.Port = ""
+	r.Protocol = ""
+	r.ICMPType = 0
+	r.ICMPCode = 0
+
+	return nil
+}
 
 // func (r *SecurityGroupRule) parseRulePort() (uint16, uint16, error) {
 // }

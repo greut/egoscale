@@ -140,7 +140,7 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupIngressRules() {
 
 	rules, err := securityGroup.IngressRules()
 	if err != nil {
-		s.FailNow("Security Group deletion failed", err)
+		s.FailNow("Security Group ingress rules listing failed", err)
 	}
 	assert.Len(s.T(), rules, 2)
 	assert.NotEmpty(s.T(), rules[0].ID)
@@ -189,7 +189,7 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupEgressRules() {
 
 	rules, err := securityGroup.EgressRules()
 	if err != nil {
-		s.FailNow("Security Group deletion failed", err)
+		s.FailNow("Security Group egress rules listing failed", err)
 	}
 	assert.Len(s.T(), rules, 2)
 	assert.NotEmpty(s.T(), rules[0].ID)
@@ -218,6 +218,45 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupDelete() {
 
 	r, _ := s.client.c.ListWithContext(s.client.ctx, &egoapi.SecurityGroup{Name: securityGroupName})
 	assert.Len(s.T(), r, 0)
+}
+
+func (s *computeSecurityGroupTestSuite) TestSecurityGroupRuleDelete() {
+	res1, teardown, err := securityGroupFixture("", "")
+	if err != nil {
+		s.FailNow("Security Group fixture setup failed", err)
+	}
+	defer teardown()
+
+	securityGroup := s.client.securityGroupFromAPI(res1)
+
+	res2, err := s.client.c.RequestWithContext(s.client.ctx, &egoapi.AuthorizeSecurityGroupIngress{
+		SecurityGroupName: securityGroup.Name,
+		CIDRList:          []egoapi.CIDR{*egoapi.MustParseCIDR("0.0.0.0/0")},
+		StartPort:         22,
+		EndPort:           22,
+		Protocol:          "tcp",
+	})
+	if err != nil {
+		s.FailNow("unable to add a test rule to the fixture Security group", err)
+	}
+
+	rule, err := s.client.securityGroupRuleFromAPI(&(res2.(*egoapi.SecurityGroup).IngressRule[0]))
+	if err != nil {
+		s.FailNow("Security Group rule retrieval failed", err)
+	}
+
+	if err := rule.Delete(); err != nil {
+		s.FailNow("Security Group rule deletion failed", err)
+	}
+
+	res3, err := s.client.c.ListWithContext(s.client.ctx, &egoapi.SecurityGroup{Name: securityGroup.Name})
+	if err != nil {
+		s.FailNow("Security Group rules listing failed", err)
+	}
+	for _, item := range res3 {
+		sg := item.(*egoapi.SecurityGroup)
+		assert.Len(s.T(), sg.IngressRule, 0)
+	}
 }
 
 func TestAccComputeSecurityGroupTestSuite(t *testing.T) {
