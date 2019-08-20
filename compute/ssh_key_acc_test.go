@@ -100,7 +100,7 @@ func (s *computeSSHKeyTestSuite) TestGetSSHKey() {
 	assert.Empty(s.T(), sshKey)
 }
 
-func (s *computeSSHKeyTestSuite) TestDeleteSSHKey() {
+func (s *computeSSHKeyTestSuite) TesteSSHKeyDelete() {
 	res, _, err := sshKeyFixture("")
 	if err != nil {
 		s.FailNow("SSH key fixture setup failed", err)

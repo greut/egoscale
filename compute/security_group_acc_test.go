@@ -100,7 +100,108 @@ func (s *computeSecurityGroupTestSuite) TestGetSecurityGroupByName() {
 	assert.Empty(s.T(), securityGroup)
 }
 
-func (s *computeSecurityGroupTestSuite) TestDeleteSecurityGroup() {
+func (s *computeSecurityGroupTestSuite) TestSecurityGroupIngressRules() {
+	res1, err := s.client.c.ListWithContext(s.client.ctx, &egoapi.SecurityGroup{Name: "default"})
+	if err != nil {
+		s.FailNow("unable to retrieve the default Security Group", err)
+	}
+	securityGroupDefault := res1[0].(*egoapi.SecurityGroup)
+
+	res2, teardown, err := securityGroupFixture("", "")
+	if err != nil {
+		s.FailNow("Security Group fixture setup failed", err)
+	}
+	defer teardown()
+
+	securityGroup := s.client.securityGroupFromAPI(res2)
+
+	for _, rule := range []*egoapi.AuthorizeSecurityGroupIngress{
+		&egoapi.AuthorizeSecurityGroupIngress{
+			SecurityGroupName: securityGroup.Name,
+			Description:       "test-egoscale",
+			CIDRList:          []egoapi.CIDR{*egoapi.MustParseCIDR("0.0.0.0/0")},
+			StartPort:         8000,
+			EndPort:           9000,
+			Protocol:          "tcp",
+		},
+		&egoapi.AuthorizeSecurityGroupIngress{
+			SecurityGroupName:     securityGroup.Name,
+			Description:           "test-egoscale",
+			UserSecurityGroupList: []egoapi.UserSecurityGroup{securityGroupDefault.UserSecurityGroup()},
+			Protocol:              "icmp",
+			IcmpType:              8,
+			IcmpCode:              0,
+		},
+	} {
+		if _, err := s.client.c.RequestWithContext(s.client.ctx, rule); err != nil {
+			s.FailNow("unable to add a test rule to the fixture Security group", err)
+		}
+	}
+
+	rules, err := securityGroup.IngressRules()
+	if err != nil {
+		s.FailNow("Security Group deletion failed", err)
+	}
+	assert.Len(s.T(), rules, 2)
+	assert.NotEmpty(s.T(), rules[0].ID)
+	assert.Equal(s.T(), "ingress", rules[0].Type)
+	assert.Equal(s.T(), "test-egoscale", rules[0].Description)
+	assert.Equal(s.T(), "default", rules[0].SecurityGroup.Name)
+	assert.Equal(s.T(), "icmp", rules[0].Protocol)
+	assert.Equal(s.T(), uint8(8), rules[0].ICMPType)
+	assert.Equal(s.T(), uint8(0), rules[0].ICMPCode)
+	assert.Equal(s.T(), "0.0.0.0/0", rules[1].NetworkCIDR.String())
+	assert.Equal(s.T(), "tcp", rules[1].Protocol)
+	assert.Equal(s.T(), "8000-9000", rules[1].Port)
+}
+
+func (s *computeSecurityGroupTestSuite) TestSecurityGroupEgressRules() {
+	res, teardown, err := securityGroupFixture("", "")
+	if err != nil {
+		s.FailNow("Security Group fixture setup failed", err)
+	}
+	defer teardown()
+
+	securityGroup := s.client.securityGroupFromAPI(res)
+
+	for _, rule := range []*egoapi.AuthorizeSecurityGroupEgress{
+		&egoapi.AuthorizeSecurityGroupEgress{
+			SecurityGroupName: securityGroup.Name,
+			Description:       "DNS",
+			CIDRList:          []egoapi.CIDR{*egoapi.MustParseCIDR("0.0.0.0/0")},
+			StartPort:         53,
+			EndPort:           53,
+			Protocol:          "tcp",
+		},
+		&egoapi.AuthorizeSecurityGroupEgress{
+			SecurityGroupName: securityGroup.Name,
+			Description:       "DNS",
+			CIDRList:          []egoapi.CIDR{*egoapi.MustParseCIDR("0.0.0.0/0")},
+			StartPort:         53,
+			EndPort:           53,
+			Protocol:          "udp",
+		},
+	} {
+		if _, err := s.client.c.RequestWithContext(s.client.ctx, rule); err != nil {
+			s.FailNow("unable to add a test rule to the fixture Security group", err)
+		}
+	}
+
+	rules, err := securityGroup.EgressRules()
+	if err != nil {
+		s.FailNow("Security Group deletion failed", err)
+	}
+	assert.Len(s.T(), rules, 2)
+	assert.NotEmpty(s.T(), rules[0].ID)
+	assert.Equal(s.T(), "egress", rules[0].Type)
+	assert.Equal(s.T(), "DNS", rules[0].Description)
+	assert.Equal(s.T(), "0.0.0.0/0", rules[0].NetworkCIDR.String())
+	assert.Equal(s.T(), "53", rules[0].Port)
+	assert.Equal(s.T(), "tcp", rules[0].Protocol)
+	assert.Equal(s.T(), "udp", rules[1].Protocol)
+}
+
+func (s *computeSecurityGroupTestSuite) TestSecurityGroupDelete() {
 	res, _, err := securityGroupFixture("", "")
 	if err != nil {
 		s.FailNow("Security Group fixture setup failed", err)

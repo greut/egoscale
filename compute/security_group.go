@@ -1,11 +1,13 @@
 package compute
 
 import (
+	"fmt"
 	"net"
 
 	"github.com/exoscale/egoscale/api"
 	egoerr "github.com/exoscale/egoscale/error"
 	egoapi "github.com/exoscale/egoscale/internal/egoscale"
+	"github.com/pkg/errors"
 )
 
 // SecurityGroupRule represents a Security Group rule.
@@ -17,15 +19,75 @@ type SecurityGroupRule struct {
 	SecurityGroup *SecurityGroup
 	Port          string
 	Protocol      string
-	ICMPCode      int
-	ICMPType      int
+	ICMPType      uint8
+	ICMPCode      uint8
 
 	c *Client
 }
 
 // TODO: SecurityGroupRule.Delete()
 
-// func (c *Client) securityGroupRuleFromAPI(rule *egoapi.IngressRule)
+// func (r *SecurityGroupRule) parseRulePort() (uint16, uint16, error) {
+// }
+
+func (c *Client) securityGroupRuleFromAPI(v interface{}) (*SecurityGroupRule, error) {
+	var (
+		rule          *egoapi.IngressRule
+		ruleType      string
+		networkCIDR   *net.IPNet
+		securityGroup *SecurityGroup
+		port          string
+		err           error
+	)
+
+	switch v.(type) {
+	case *egoapi.IngressRule:
+		ruleType = "ingress"
+		rule = v.(*egoapi.IngressRule)
+
+	case *egoapi.EgressRule:
+		ruleType = "egress"
+		rule = (*egoapi.IngressRule)(v.(*egoapi.EgressRule))
+		// ^
+		// Go typing madness: we cast the interface v underlying type *egoapi.EgressRule
+		// into a *egoapi.IngressRule since the type egoapi.EgressRule is actually an alias for egoapi.IngressRule
+		// Sorry about that...
+
+	default:
+		return nil, fmt.Errorf("invalid rule type from API: %T", v)
+	}
+
+	if rule.CIDR != nil {
+		networkCIDR = &net.IPNet{IP: rule.CIDR.IP, Mask: rule.CIDR.Mask}
+	}
+
+	if rule.SecurityGroupName != "" {
+		if securityGroup, err = c.GetSecurityGroupByName(rule.SecurityGroupName); err != nil {
+			return nil, errors.Wrapf(err, "unable to retrieve Security Group %q", rule.SecurityGroupName)
+		}
+	}
+
+	if rule.StartPort > 0 {
+		if rule.StartPort < rule.EndPort {
+			port = fmt.Sprintf("%d-%d", rule.StartPort, rule.EndPort)
+		} else { // If StartPort is not lower than EndPort then it's equal since it can't be greater
+			port = fmt.Sprint(rule.StartPort)
+		}
+	}
+
+	return &SecurityGroupRule{
+		ID:            rule.RuleID.String(),
+		Type:          ruleType,
+		Description:   rule.Description,
+		NetworkCIDR:   networkCIDR,
+		SecurityGroup: securityGroup,
+		Port:          port,
+		Protocol:      rule.Protocol,
+		ICMPCode:      rule.IcmpCode,
+		ICMPType:      rule.IcmpType,
+		c:             c,
+	}, nil
+}
 
 // SecurityGroup represents a Security Group.
 type SecurityGroup struct {
@@ -38,7 +100,55 @@ type SecurityGroup struct {
 	c *Client
 }
 
-// TODO: SecurityGroup.Rules()
+// IngressRules returns the list of ingress-type Security Group rules.
+func (s *SecurityGroup) IngressRules() ([]*SecurityGroupRule, error) {
+	var (
+		rules []*SecurityGroupRule
+	)
+
+	res, err := s.c.c.ListWithContext(s.c.ctx, &egoapi.SecurityGroup{Name: s.Name})
+	if err != nil {
+		return nil, err
+	}
+
+	for _, item := range res {
+		sg := item.(*egoapi.SecurityGroup)
+
+		rules = make([]*SecurityGroupRule, len(sg.IngressRule))
+		for i, rule := range sg.IngressRule {
+			if rules[i], err = s.c.securityGroupRuleFromAPI(&rule); err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	return rules, nil
+}
+
+// EgressRules returns the list of egress-type Security Group rules.
+func (s *SecurityGroup) EgressRules() ([]*SecurityGroupRule, error) {
+	var (
+		rules []*SecurityGroupRule
+	)
+
+	res, err := s.c.c.ListWithContext(s.c.ctx, &egoapi.SecurityGroup{Name: s.Name})
+	if err != nil {
+		return nil, err
+	}
+
+	for _, item := range res {
+		sg := item.(*egoapi.SecurityGroup)
+
+		rules = make([]*SecurityGroupRule, len(sg.EgressRule))
+		for i, rule := range sg.EgressRule {
+			if rules[i], err = s.c.securityGroupRuleFromAPI(&rule); err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	return rules, nil
+}
 
 // TODO: SecurityGroup.AddRules()
 

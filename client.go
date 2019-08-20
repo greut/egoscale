@@ -10,7 +10,7 @@ import (
 	egoerr "github.com/exoscale/egoscale/error"
 	"github.com/exoscale/egoscale/runstatus"
 	"github.com/exoscale/egoscale/storage"
-	"github.com/pkg/errors" // TODO: replace with Go2-style error wrapping
+	"github.com/pkg/errors" // TODO: replace with Go2-style error wrapping (golang.org/x/xerrors)
 )
 
 // Client represents an Exoscale API client.

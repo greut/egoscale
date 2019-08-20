@@ -28,85 +28,6 @@ func (s *dnsDomainTestSuite) SetupTest() {
 	s.testDomainName = "example.net"
 }
 
-func (s *dnsDomainTestSuite) TestDomainAddRecord() {
-	var (
-		recordName     = "test-egoscale"
-		recordType     = "MX"
-		recordContent  = "mx1.example.net"
-		recordPriority = 10
-		recordTTL      = 1042
-	)
-
-	res, teardown, err := domainFixture(s.testDomainName)
-	if err != nil {
-		s.FailNow("domain fixture setup failed", err)
-	}
-	defer teardown() // nolint:errcheck
-	domain := s.client.domainFromAPI(res)
-
-	record, err := domain.AddRecord(
-		recordName,
-		recordType,
-		recordContent,
-		recordPriority,
-		recordTTL,
-	)
-	if err != nil {
-		s.FailNow("domain record creation failed", err)
-	}
-	assert.Equal(s.T(), recordName, record.Name)
-	assert.Equal(s.T(), recordType, record.Type)
-	assert.Equal(s.T(), recordContent, record.Content)
-	// assert.Equal(s.T(), recordPriority, record.Priority) // TODO: API bug, uncomment once fixed
-	assert.Equal(s.T(), recordTTL, record.TTL)
-}
-
-func (s *dnsDomainTestSuite) TestDomainRecords() {
-	var (
-		recordName     = "test-egoscale"
-		recordType     = "MX"
-		recordContent  = "mx1.example.net"
-		recordPriority = 10
-		recordTTL      = 1042
-	)
-
-	res, teardown, err := domainFixture(s.testDomainName)
-	if err != nil {
-		s.FailNow("domain fixture setup failed", err)
-	}
-	defer teardown() // nolint:errcheck
-
-	if _, err = s.client.c.Request(&egoapi.CreateDNSRecord{
-		Domain:   res.Name,
-		Name:     recordName,
-		Type:     recordType,
-		Content:  recordContent,
-		Priority: recordPriority,
-		TTL:      recordTTL,
-	}); err != nil {
-		s.FailNow("domain record fixture setup failed", err)
-	}
-	domain := s.client.domainFromAPI(res)
-
-	records, err := domain.Records()
-	if err != nil {
-		s.FailNow("domain records listing failed", err)
-	}
-	assert.GreaterOrEqual(s.T(), len(records), 1)
-
-	for _, record := range records {
-		if record.Name == "" {
-			continue
-		}
-
-		assert.Equal(s.T(), recordName, record.Name)
-		assert.Equal(s.T(), recordType, record.Type)
-		assert.Equal(s.T(), recordContent, record.Content)
-		// assert.Equal(s.T(), recordPriority, record.Priority) // TODO: API bug, uncomment once fixed
-		assert.Equal(s.T(), recordTTL, record.TTL)
-	}
-}
-
 func (s *dnsDomainTestSuite) TestCreateDomain() {
 	var (
 		unicodeName          = "égzoskèle.ch"
@@ -190,7 +111,86 @@ func (s *dnsDomainTestSuite) TestGetDomainByName() {
 	assert.Empty(s.T(), domain)
 }
 
-func (s *dnsDomainTestSuite) TestDeleteDomain() {
+func (s *dnsDomainTestSuite) TestDomainAddRecord() {
+	var (
+		recordName     = "test-egoscale"
+		recordType     = "MX"
+		recordContent  = "mx1.example.net"
+		recordPriority = 10
+		recordTTL      = 1042
+	)
+
+	res, teardown, err := domainFixture(s.testDomainName)
+	if err != nil {
+		s.FailNow("domain fixture setup failed", err)
+	}
+	defer teardown() // nolint:errcheck
+	domain := s.client.domainFromAPI(res)
+
+	record, err := domain.AddRecord(
+		recordName,
+		recordType,
+		recordContent,
+		recordPriority,
+		recordTTL,
+	)
+	if err != nil {
+		s.FailNow("domain record creation failed", err)
+	}
+	assert.Equal(s.T(), recordName, record.Name)
+	assert.Equal(s.T(), recordType, record.Type)
+	assert.Equal(s.T(), recordContent, record.Content)
+	// assert.Equal(s.T(), recordPriority, record.Priority) // TODO: API bug, uncomment once fixed
+	assert.Equal(s.T(), recordTTL, record.TTL)
+}
+
+func (s *dnsDomainTestSuite) TestDomainRecords() {
+	var (
+		recordName     = "test-egoscale"
+		recordType     = "MX"
+		recordContent  = "mx1.example.net"
+		recordPriority = 10
+		recordTTL      = 1042
+	)
+
+	res, teardown, err := domainFixture(s.testDomainName)
+	if err != nil {
+		s.FailNow("domain fixture setup failed", err)
+	}
+	defer teardown() // nolint:errcheck
+
+	if _, err = s.client.c.Request(&egoapi.CreateDNSRecord{
+		Domain:   res.Name,
+		Name:     recordName,
+		Type:     recordType,
+		Content:  recordContent,
+		Priority: recordPriority,
+		TTL:      recordTTL,
+	}); err != nil {
+		s.FailNow("domain record fixture setup failed", err)
+	}
+	domain := s.client.domainFromAPI(res)
+
+	records, err := domain.Records()
+	if err != nil {
+		s.FailNow("domain records listing failed", err)
+	}
+	assert.GreaterOrEqual(s.T(), len(records), 1)
+
+	for _, record := range records {
+		if record.Name == "" {
+			continue
+		}
+
+		assert.Equal(s.T(), recordName, record.Name)
+		assert.Equal(s.T(), recordType, record.Type)
+		assert.Equal(s.T(), recordContent, record.Content)
+		// assert.Equal(s.T(), recordPriority, record.Priority) // TODO: API bug, uncomment once fixed
+		assert.Equal(s.T(), recordTTL, record.TTL)
+	}
+}
+
+func (s *dnsDomainTestSuite) TestDomainDelete() {
 	res, _, err := domainFixture(s.testDomainName)
 	if err != nil {
 		s.FailNow("domain fixture setup failed", err)

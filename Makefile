@@ -4,7 +4,7 @@ PKGS ?= . \
 	./dns \
 	./storage \
 	./runstatus
-TESTOPTS = -v -timeout 120m -parallel 3
+TESTOPTS = -v -timeout 120m -parallel 3 -count=1
 
 lint:
 	@golangci-lint run --build-tags=testacc --skip-dirs internal/ $(LINTARGS)
