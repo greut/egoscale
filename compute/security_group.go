@@ -3,6 +3,8 @@ package compute
 import (
 	"fmt"
 	"net"
+	"strconv"
+	"strings"
 
 	"github.com/exoscale/egoscale/api"
 	egoerr "github.com/exoscale/egoscale/error"
@@ -52,8 +54,24 @@ func (r *SecurityGroupRule) Delete() error {
 	return nil
 }
 
-// func (r *SecurityGroupRule) parseRulePort() (uint16, uint16, error) {
-// }
+func (r *SecurityGroupRule) parsePort() (uint16, uint16) {
+	var startPort, endPort int
+
+	if r.Port == "" {
+		return 0, 0
+	}
+
+	ports := strings.Split(r.Port, "-")
+	if len(ports) == 1 {
+		startPort, _ = strconv.Atoi(ports[0])
+		endPort = startPort
+	} else {
+		startPort, _ = strconv.Atoi(ports[0])
+		endPort, _ = strconv.Atoi(ports[1])
+	}
+
+	return uint16(startPort), uint16(endPort)
+}
 
 func (c *Client) securityGroupRuleFromAPI(v interface{}) (*SecurityGroupRule, error) {
 	var (
@@ -65,14 +83,14 @@ func (c *Client) securityGroupRuleFromAPI(v interface{}) (*SecurityGroupRule, er
 		err           error
 	)
 
-	switch v.(type) {
+	switch v := v.(type) {
 	case *egoapi.IngressRule:
 		ruleType = "ingress"
-		rule = v.(*egoapi.IngressRule)
+		rule = v
 
 	case *egoapi.EgressRule:
 		ruleType = "egress"
-		rule = (*egoapi.IngressRule)(v.(*egoapi.EgressRule))
+		rule = (*egoapi.IngressRule)(v)
 		// ^
 		// Go typing madness: we cast the interface v underlying type *egoapi.EgressRule
 		// into a *egoapi.IngressRule since the type egoapi.EgressRule is actually an alias for egoapi.IngressRule
@@ -141,6 +159,7 @@ func (s *SecurityGroup) IngressRules() ([]*SecurityGroupRule, error) {
 
 		rules = make([]*SecurityGroupRule, len(sg.IngressRule))
 		for i, rule := range sg.IngressRule {
+			rule := rule
 			if rules[i], err = s.c.securityGroupRuleFromAPI(&rule); err != nil {
 				return nil, err
 			}
@@ -166,6 +185,7 @@ func (s *SecurityGroup) EgressRules() ([]*SecurityGroupRule, error) {
 
 		rules = make([]*SecurityGroupRule, len(sg.EgressRule))
 		for i, rule := range sg.EgressRule {
+			rule := rule
 			if rules[i], err = s.c.securityGroupRuleFromAPI(&rule); err != nil {
 				return nil, err
 			}
@@ -175,18 +195,71 @@ func (s *SecurityGroup) EgressRules() ([]*SecurityGroupRule, error) {
 	return rules, nil
 }
 
-// TODO: SecurityGroup.AddRules()
+// AddRule adds the provided rule to the Security Group. The rule ID doesn't have to be specified.
+func (s *SecurityGroup) AddRule(rule *SecurityGroupRule) error {
+	var (
+		cidrList []egoapi.CIDR
+		usg      []egoapi.UserSecurityGroup
+	)
+
+	startPort, endPort := rule.parsePort()
+
+	if rule.NetworkCIDR != nil {
+		cidrList = []egoapi.CIDR{*egoapi.MustParseCIDR(rule.NetworkCIDR.String())}
+	}
+
+	if rule.SecurityGroup != nil {
+		usg = []egoapi.UserSecurityGroup{egoapi.UserSecurityGroup{Group: rule.SecurityGroup.Name}}
+	}
+
+	switch rule.Type {
+	case "ingress":
+		if _, err := s.c.c.RequestWithContext(s.c.ctx, &egoapi.AuthorizeSecurityGroupIngress{
+			SecurityGroupName:     s.Name,
+			Description:           rule.Description,
+			CIDRList:              cidrList,
+			UserSecurityGroupList: usg,
+			StartPort:             startPort,
+			EndPort:               endPort,
+			Protocol:              rule.Protocol,
+			IcmpType:              rule.ICMPType,
+			IcmpCode:              rule.ICMPCode,
+		}); err != nil {
+			return err
+		}
+
+	case "egress":
+		if _, err := s.c.c.RequestWithContext(s.c.ctx, &egoapi.AuthorizeSecurityGroupEgress{
+			SecurityGroupName:     s.Name,
+			Description:           rule.Description,
+			CIDRList:              cidrList,
+			UserSecurityGroupList: usg,
+			StartPort:             startPort,
+			EndPort:               endPort,
+			Protocol:              rule.Protocol,
+			IcmpType:              rule.ICMPType,
+			IcmpCode:              rule.ICMPCode,
+		}); err != nil {
+			return err
+		}
+
+	default:
+		return fmt.Errorf("unsupported rule type %q, must be ingress or egress", rule.Type)
+	}
+
+	return nil
+}
 
 // Delete deletes the Security Group.
-func (sg *SecurityGroup) Delete() error {
-	if err := sg.c.csError(sg.c.c.BooleanRequestWithContext(sg.c.ctx,
-		&egoapi.DeleteSecurityGroup{Name: sg.Name})); err != nil {
+func (s *SecurityGroup) Delete() error {
+	if err := s.c.csError(s.c.c.BooleanRequestWithContext(s.c.ctx,
+		&egoapi.DeleteSecurityGroup{Name: s.Name})); err != nil {
 		return err
 	}
 
-	sg.ID = ""
-	sg.Name = ""
-	sg.Description = ""
+	s.ID = ""
+	s.Name = ""
+	s.Description = ""
 
 	return nil
 }

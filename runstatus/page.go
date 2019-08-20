@@ -47,6 +47,7 @@ func (c *Client) ListPages() ([]*Page, error) {
 	}
 
 	for _, page := range res {
+		page := page
 		pages = append(pages, c.pageFromAPI(&page))
 	}
 

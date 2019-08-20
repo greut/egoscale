@@ -3,6 +3,9 @@
 package compute
 
 import (
+	"fmt"
+	"net"
+	"strings"
 	"testing"
 
 	egoerr "github.com/exoscale/egoscale/error"
@@ -100,6 +103,68 @@ func (s *computeSecurityGroupTestSuite) TestGetSecurityGroupByName() {
 	assert.Empty(s.T(), securityGroup)
 }
 
+func (s *computeSecurityGroupTestSuite) TestSecurityGroupAddRule() {
+	var (
+		testDescription     = "test-egoscale"
+		testNetworkCIDR     = "1.1.1.1/32"
+		testPortIngress     = "80-81"
+		testPortEgress      = "53"
+		testProtocolIngress = "tcp"
+		testProtocolEgress  = "udp"
+	)
+
+	res1, teardown, err := securityGroupFixture("", "")
+	if err != nil {
+		s.FailNow("Security Group fixture setup failed", err)
+	}
+	defer teardown() // nolint:errcheck
+
+	_, testCIDR, _ := net.ParseCIDR(testNetworkCIDR)
+	securityGroup := s.client.securityGroupFromAPI(res1)
+
+	for _, rule := range []SecurityGroupRule{
+		SecurityGroupRule{
+			Type:        "ingress",
+			Description: testDescription,
+			NetworkCIDR: testCIDR,
+			Port:        testPortIngress,
+			Protocol:    testProtocolIngress,
+		},
+		SecurityGroupRule{
+			Type:          "egress",
+			Description:   testDescription,
+			SecurityGroup: &SecurityGroup{Name: "default"},
+			Port:          testPortEgress,
+			Protocol:      testProtocolEgress,
+		},
+	} {
+		rule := rule
+		if err := securityGroup.AddRule(&rule); err != nil {
+			s.FailNow("Security Group rule adding failed", err)
+		}
+	}
+
+	res2, err := s.client.c.ListWithContext(s.client.ctx, &egoapi.SecurityGroup{Name: securityGroup.Name})
+	if err != nil {
+		s.FailNow("Security Group rules listing failed", err)
+	}
+	for _, item := range res2 {
+		sg := item.(*egoapi.SecurityGroup)
+		assert.Len(s.T(), sg.IngressRule, 1)
+		assert.Len(s.T(), sg.EgressRule, 1)
+		assert.Equal(s.T(), testDescription, sg.IngressRule[0].Description)
+		assert.Equal(s.T(), testNetworkCIDR, sg.IngressRule[0].CIDR.String())
+		assert.Equal(s.T(), strings.Split(testPortIngress, "-")[0], fmt.Sprint(sg.IngressRule[0].StartPort))
+		assert.Equal(s.T(), strings.Split(testPortIngress, "-")[1], fmt.Sprint(sg.IngressRule[0].EndPort))
+		assert.Equal(s.T(), testProtocolIngress, sg.IngressRule[0].Protocol)
+		assert.Equal(s.T(), testDescription, sg.EgressRule[0].Description)
+		assert.Equal(s.T(), "default", sg.EgressRule[0].SecurityGroupName)
+		assert.Equal(s.T(), testPortEgress, fmt.Sprint(sg.EgressRule[0].StartPort))
+		assert.Equal(s.T(), testPortEgress, fmt.Sprint(sg.EgressRule[0].EndPort))
+		assert.Equal(s.T(), testProtocolEgress, sg.EgressRule[0].Protocol)
+	}
+}
+
 func (s *computeSecurityGroupTestSuite) TestSecurityGroupIngressRules() {
 	res1, err := s.client.c.ListWithContext(s.client.ctx, &egoapi.SecurityGroup{Name: "default"})
 	if err != nil {
@@ -111,7 +176,7 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupIngressRules() {
 	if err != nil {
 		s.FailNow("Security Group fixture setup failed", err)
 	}
-	defer teardown()
+	defer teardown() // nolint:errcheck
 
 	securityGroup := s.client.securityGroupFromAPI(res2)
 
@@ -160,7 +225,7 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupEgressRules() {
 	if err != nil {
 		s.FailNow("Security Group fixture setup failed", err)
 	}
-	defer teardown()
+	defer teardown() // nolint:errcheck
 
 	securityGroup := s.client.securityGroupFromAPI(res)
 
@@ -225,7 +290,7 @@ func (s *computeSecurityGroupTestSuite) TestSecurityGroupRuleDelete() {
 	if err != nil {
 		s.FailNow("Security Group fixture setup failed", err)
 	}
-	defer teardown()
+	defer teardown() // nolint:errcheck
 
 	securityGroup := s.client.securityGroupFromAPI(res1)
 
