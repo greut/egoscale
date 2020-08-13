@@ -17,7 +17,7 @@ import (
 	"github.com/pkg/errors"
 
 	apiv2 "github.com/exoscale/egoscale/api/v2"
-	v2 "github.com/exoscale/egoscale/internal/v2"
+	v2 "github.com/exoscale/egoscale/pkg/v2"
 )
 
 // UserAgent is the "User-Agent" HTTP request header added to outgoing HTTP requests.
@@ -69,7 +69,7 @@ type Client struct {
 	Logger *log.Logger
 
 	// API V2 secondary client
-	v2 v2.ClientPoller
+	V2 v2.ClientPoller
 }
 
 // RetryStrategyFunc represents a how much time to wait between two calls to the API
@@ -128,7 +128,7 @@ func NewClient(endpoint, apiKey, apiSecret string) *Client {
 		),
 	}
 
-	if client.v2, err = v2.NewClientWithResponses(endpointURL.String(), opts...); err != nil {
+	if client.V2, err = v2.NewClientWithResponses(endpointURL.String(), opts...); err != nil {
 		panic(errors.Wrap(err, "unable to initialize API client"))
 	}
 

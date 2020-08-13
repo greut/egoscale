@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	v2 "github.com/exoscale/egoscale/internal/v2"
+	v2 "github.com/exoscale/egoscale/pkg/v2"
 )
 
 var (
@@ -51,7 +51,7 @@ func TestClient_CreateNetworkLoadBalancer(t *testing.T) { t.Skip() }
 func TestClient_ListNetworkLoadBalancers(t *testing.T) {
 	v2MockClient := new(v2.MockClient)
 	client := NewClient("x", "x", "x")
-	client.v2 = v2MockClient
+	client.V2 = v2MockClient
 
 	v2MockClient.
 		On("ListLoadBalancersWithResponse", mock.Anything, mock.Anything).
@@ -145,7 +145,7 @@ func TestClient_ListNetworkLoadBalancers(t *testing.T) {
 func TestClient_GetNetworkLoadBalancer(t *testing.T) {
 	v2MockClient := new(v2.MockClient)
 	client := NewClient("x", "x", "x")
-	client.v2 = v2MockClient
+	client.V2 = v2MockClient
 
 	v2MockClient.
 		On("GetLoadBalancerWithResponse", mock.Anything, mock.Anything).
