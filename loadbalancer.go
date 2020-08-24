@@ -9,7 +9,7 @@ import (
 	"time"
 
 	apiv2 "github.com/exoscale/egoscale/api/v2"
-	v2 "github.com/exoscale/egoscale/internal/v2"
+	v2 "github.com/exoscale/egoscale/pkg/v2"
 )
 
 // NetworkLoadBalancerServerStatus represents a Network Load Balancer service target server status.
@@ -145,7 +145,7 @@ func (nlb *NetworkLoadBalancer) AddService(ctx context.Context,
 		services[svc.ID] = struct{}{}
 	}
 
-	resp, err := nlb.c.v2.AddServiceToLoadBalancerWithResponse(
+	resp, err := nlb.c.V2.AddServiceToLoadBalancerWithResponse(
 		apiv2.WithZone(ctx, nlb.zone),
 		nlb.ID,
 		v2.AddServiceToLoadBalancerJSONRequestBody{
@@ -179,7 +179,7 @@ func (nlb *NetworkLoadBalancer) AddService(ctx context.Context,
 
 	res, err := v2.NewPoller().
 		WithTimeout(nlb.c.Timeout).
-		Poll(ctx, nlb.c.v2.OperationPoller(nlb.zone, *resp.JSON200.Id))
+		Poll(ctx, nlb.c.V2.OperationPoller(nlb.zone, *resp.JSON200.Id))
 	if err != nil {
 		return nil, err
 	}
@@ -209,7 +209,7 @@ func (nlb *NetworkLoadBalancer) UpdateService(ctx context.Context, svc *NetworkL
 		healthcheckTimeout  = int64(svc.Healthcheck.Timeout.Seconds())
 	)
 
-	resp, err := nlb.c.v2.UpdateLoadBalancerServiceWithResponse(
+	resp, err := nlb.c.V2.UpdateLoadBalancerServiceWithResponse(
 		apiv2.WithZone(ctx, nlb.zone),
 		nlb.ID,
 		svc.ID,
@@ -243,7 +243,7 @@ func (nlb *NetworkLoadBalancer) UpdateService(ctx context.Context, svc *NetworkL
 
 	_, err = v2.NewPoller().
 		WithTimeout(nlb.c.Timeout).
-		Poll(ctx, nlb.c.v2.OperationPoller(nlb.zone, *resp.JSON200.Id))
+		Poll(ctx, nlb.c.V2.OperationPoller(nlb.zone, *resp.JSON200.Id))
 	if err != nil {
 		return err
 	}
@@ -253,7 +253,7 @@ func (nlb *NetworkLoadBalancer) UpdateService(ctx context.Context, svc *NetworkL
 
 // DeleteService deletes the specified service from the Network Load Balancer instance.
 func (nlb *NetworkLoadBalancer) DeleteService(ctx context.Context, svc *NetworkLoadBalancerService) error {
-	resp, err := nlb.c.v2.DeleteLoadBalancerServiceWithResponse(
+	resp, err := nlb.c.V2.DeleteLoadBalancerServiceWithResponse(
 		apiv2.WithZone(ctx, nlb.zone),
 		nlb.ID,
 		svc.ID,
@@ -264,7 +264,7 @@ func (nlb *NetworkLoadBalancer) DeleteService(ctx context.Context, svc *NetworkL
 
 	_, err = v2.NewPoller().
 		WithTimeout(nlb.c.Timeout).
-		Poll(ctx, nlb.c.v2.OperationPoller(nlb.zone, *resp.JSON200.Id))
+		Poll(ctx, nlb.c.V2.OperationPoller(nlb.zone, *resp.JSON200.Id))
 	if err != nil {
 		return err
 	}
@@ -275,7 +275,7 @@ func (nlb *NetworkLoadBalancer) DeleteService(ctx context.Context, svc *NetworkL
 // CreateNetworkLoadBalancer creates a Network Load Balancer instance in the specified zone.
 func (c *Client) CreateNetworkLoadBalancer(ctx context.Context, zone string,
 	nlb *NetworkLoadBalancer) (*NetworkLoadBalancer, error) {
-	resp, err := c.v2.CreateLoadBalancerWithResponse(
+	resp, err := c.V2.CreateLoadBalancerWithResponse(
 		apiv2.WithZone(ctx, zone),
 		v2.CreateLoadBalancerJSONRequestBody{
 			Name:        &nlb.Name,
@@ -290,7 +290,7 @@ func (c *Client) CreateNetworkLoadBalancer(ctx context.Context, zone string,
 
 	res, err := v2.NewPoller().
 		WithTimeout(c.Timeout).
-		Poll(ctx, c.v2.OperationPoller(zone, *resp.JSON200.Id))
+		Poll(ctx, c.V2.OperationPoller(zone, *resp.JSON200.Id))
 	if err != nil {
 		return nil, err
 	}
@@ -303,7 +303,7 @@ func (c *Client) CreateNetworkLoadBalancer(ctx context.Context, zone string,
 func (c *Client) ListNetworkLoadBalancers(ctx context.Context, zone string) ([]*NetworkLoadBalancer, error) {
 	var list = make([]*NetworkLoadBalancer, 0)
 
-	resp, err := c.v2.ListLoadBalancersWithResponse(apiv2.WithZone(ctx, zone))
+	resp, err := c.V2.ListLoadBalancersWithResponse(apiv2.WithZone(ctx, zone))
 	if err != nil {
 		return nil, err
 	}
@@ -327,7 +327,7 @@ func (c *Client) ListNetworkLoadBalancers(ctx context.Context, zone string) ([]*
 // GetNetworkLoadBalancer returns the Network Load Balancer instance corresponding to the
 // specified ID in the specified zone.
 func (c *Client) GetNetworkLoadBalancer(ctx context.Context, zone, id string) (*NetworkLoadBalancer, error) {
-	resp, err := c.v2.GetLoadBalancerWithResponse(apiv2.WithZone(ctx, zone), id)
+	resp, err := c.V2.GetLoadBalancerWithResponse(apiv2.WithZone(ctx, zone), id)
 	if err != nil {
 		return nil, err
 	}
@@ -351,7 +351,7 @@ func (c *Client) GetNetworkLoadBalancer(ctx context.Context, zone, id string) (*
 // UpdateNetworkLoadBalancer updates the specified Network Load Balancer instance in the specified zone.
 func (c *Client) UpdateNetworkLoadBalancer(ctx context.Context, zone string,
 	nlb *NetworkLoadBalancer) (*NetworkLoadBalancer, error) {
-	resp, err := c.v2.UpdateLoadBalancerWithResponse(
+	resp, err := c.V2.UpdateLoadBalancerWithResponse(
 		apiv2.WithZone(ctx, zone),
 		nlb.ID,
 		v2.UpdateLoadBalancerJSONRequestBody{
@@ -373,7 +373,7 @@ func (c *Client) UpdateNetworkLoadBalancer(ctx context.Context, zone string,
 
 	res, err := v2.NewPoller().
 		WithTimeout(c.Timeout).
-		Poll(ctx, c.v2.OperationPoller(zone, *resp.JSON200.Id))
+		Poll(ctx, c.V2.OperationPoller(zone, *resp.JSON200.Id))
 	if err != nil {
 		return nil, err
 	}
@@ -383,7 +383,7 @@ func (c *Client) UpdateNetworkLoadBalancer(ctx context.Context, zone string,
 
 // DeleteNetworkLoadBalancer deletes the specified Network Load Balancer instance in the specified zone.
 func (c *Client) DeleteNetworkLoadBalancer(ctx context.Context, zone, id string) error {
-	resp, err := c.v2.DeleteLoadBalancerWithResponse(apiv2.WithZone(ctx, zone), id)
+	resp, err := c.V2.DeleteLoadBalancerWithResponse(apiv2.WithZone(ctx, zone), id)
 	if err != nil {
 		return err
 	}
@@ -399,7 +399,7 @@ func (c *Client) DeleteNetworkLoadBalancer(ctx context.Context, zone, id string)
 
 	_, err = v2.NewPoller().
 		WithTimeout(c.Timeout).
-		Poll(ctx, c.v2.OperationPoller(zone, *resp.JSON200.Id))
+		Poll(ctx, c.V2.OperationPoller(zone, *resp.JSON200.Id))
 	if err != nil {
 		return err
 	}

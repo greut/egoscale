@@ -10,7 +10,7 @@ import (
 	"github.com/jarcoal/httpmock"
 	"github.com/stretchr/testify/require"
 
-	v2 "github.com/exoscale/egoscale/internal/v2"
+	v2 "github.com/exoscale/egoscale/pkg/v2"
 )
 
 const iso8601Format = "2006-01-02T15:04:05Z"
@@ -53,7 +53,7 @@ func TestNetworkLoadBalancer_AddService(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("POST", "/load-balancer/"+testNLBID+"/service",
@@ -188,7 +188,7 @@ func TestClient_ListNetworkLoadBalancers(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("GET", "/load-balancer",
@@ -287,7 +287,7 @@ func TestClient_GetNetworkLoadBalancer(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("GET", "/load-balancer/"+testNLBID, // nolint:dupl
