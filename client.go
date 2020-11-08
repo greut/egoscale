@@ -16,7 +16,7 @@ import (
 	"github.com/pkg/errors"
 
 	apiv2 "github.com/exoscale/egoscale/api/v2"
-	v2 "github.com/exoscale/egoscale/internal/v2"
+	v2 "github.com/exoscale/egoscale/pkg/v2"
 )
 
 // UserAgent is the "User-Agent" HTTP request header added to outgoing HTTP requests.
