@@ -68,7 +68,7 @@ type Client struct {
 	Logger *log.Logger
 
 	// API V2 secondary client
-	v2 *v2.ClientWithResponses
+	V2 *v2.ClientWithResponses
 }
 
 // RetryStrategyFunc represents a how much time to wait between two calls to the API
@@ -127,7 +127,7 @@ func NewClient(endpoint, apiKey, apiSecret string) *Client {
 		),
 	}
 
-	if client.v2, err = v2.NewClientWithResponses(endpointURL.String(), opts...); err != nil {
+	if client.V2, err = v2.NewClientWithResponses(endpointURL.String(), opts...); err != nil {
 		panic(errors.Wrap(err, "unable to initialize API client"))
 	}
 

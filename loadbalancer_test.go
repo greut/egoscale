@@ -54,7 +54,7 @@ func TestNetworkLoadBalancer_AddService(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("POST", "/load-balancer/"+testNLBID+"/service",
@@ -191,7 +191,7 @@ func TestClient_ListNetworkLoadBalancers(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("GET", "/load-balancer",
@@ -290,7 +290,7 @@ func TestClient_GetNetworkLoadBalancer(t *testing.T) {
 
 	mockClient := v2.NewMockClient()
 	client := NewClient("x", "x", "x")
-	client.v2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
+	client.V2, err = v2.NewClientWithResponses("", v2.WithHTTPClient(mockClient))
 	require.NoError(t, err)
 
 	mockClient.RegisterResponder("GET", "/load-balancer/"+testNLBID, // nolint:dupl
